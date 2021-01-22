@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>com.shang.json_parse</id>
+    <name>json_parse</name>
+    <vendor email="shang717597589@gmail.com" url="">shangwei</vendor>
+
+    <description><![CDATA[
+      Tired of opening the browser for formatting and validating JSON?
+Why don't you install JSON Parser and do it inside IDE with offline support?
+JSON Parser is a lightweight plugin for validating and formatting JSON strings.
+Install and spread the word :)<br>
+    ]]></description>
+
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <toolWindow id="Json Parser" anchor="right"
+                    factoryClass="com.shang.ParserToolWindowFactory"/>
+    </extensions>
+    <actions>
+
+        <action id="ParserActionId" class="com.shang.ui.action.OpenParserAction" text="Json Parser"
+                description="Open in Json Parser">
+            <add-to-group group-id="EditMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift alt J" second-keystroke="ctrl alt J"/>
+        </action>
+
+    </actions>
+    <project-components>
+        <component>
+            <implementation-class>com.shang.ParserComponent</implementation-class>
+        </component>
+    </project-components>
+</idea-plugin>
