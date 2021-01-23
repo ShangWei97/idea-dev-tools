@@ -18,8 +18,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.text.ParseException;
 
-import static com.shang.ui.util.DataToObjectTest.strToJson;
-
 /**
  * Created by Godwin on 4/21/2018 12:32 PM for json.
  *
