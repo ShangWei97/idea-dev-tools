@@ -108,9 +108,9 @@ public class ParserComponent implements ProjectComponent {
                             isShown = true;
                             time = System.currentTimeMillis();
                             Notifications.Bus.notify(new Notification(
-                                    "Json Parser",
-                                    "Like it",
-                                    "Like this plugin? <a href=https://paypal.me/godwinj>Donate</a> or <b>Give it a star</b>  <a href=https://plugins.jetbrains.com/plugin/10650-json-parser>Json Parser</a> and spread the word",
+                                    "json_parse",
+                                    "Do you like it",
+                                    "",
                                     NotificationType.INFORMATION,
                                     new NotificationListener.UrlOpeningListener(true)));
                         }

@@ -25,7 +25,7 @@ public class NewWindowAction extends AnAction {
     public void actionPerformed(@NotNull AnActionEvent anActionEvent) {
 
         if (mParserWidget != null && mParserWidget.getComponent() != null) {
-            ParserWindow window = new ParserWindow(mParserWidget, "Json Parser " + count,count);
+            ParserWindow window = new ParserWindow(mParserWidget, "json_parse" + count,count);
             count++;
             window.setWindowAdapter(new WindowAdapter() {
                 @Override

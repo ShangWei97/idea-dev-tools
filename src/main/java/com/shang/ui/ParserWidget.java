@@ -11,9 +11,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Set;
 
-/**
- * crea
- */
+
 public class ParserWidget extends JPanel implements IParserWidget {
     private Project mProject;
     private Disposable mParent;
@@ -53,7 +51,7 @@ public class ParserWidget extends JPanel implements IParserWidget {
         for (int i = 0; i < tabs.getTabCount(); i++) {
             names.add(tabs.getTitleAt(i));
         }
-        String suggestedName = "Parser";
+        String suggestedName = "json_parse";
         String newSdkName = suggestedName;
         int i = 0;
         while (names.contains(newSdkName)) {

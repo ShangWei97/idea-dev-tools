@@ -10,11 +10,15 @@ import com.intellij.openapi.editor.event.DocumentListener;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiDocumentManager;
 import com.intellij.psi.PsiFile;
+import com.shang.ui.util.ToStringUtils;
 import com.shang.ui.IParserWidget;
 import org.apache.http.util.TextUtils;
 
 import javax.swing.*;
 import java.awt.*;
+import java.text.ParseException;
+
+import static com.shang.ui.util.DataToObjectTest.strToJson;
 
 /**
  * Created by Godwin on 4/21/2018 12:32 PM for json.
@@ -27,6 +31,7 @@ public class ParserWidget {
     private JPanel outputContainer;
     private JPanel inputEditorContainer;
     private JButton parseButton;
+    private JButton button1;
 
     private Editor mInputEditor;
 
@@ -45,8 +50,18 @@ public class ParserWidget {
 
         this.inputEditorContainer.add(mInputEditor.getComponent(), BorderLayout.CENTER);
         this.outputContainer.add(this.mBodyWidget.container, BorderLayout.CENTER);
-
         setEventListeners();
+        button1.addActionListener(e -> {
+            String javaString = mInputEditor.getDocument().getText();
+            String jsonString;
+            try {
+                jsonString = ToStringUtils.toJSONString(javaString);
+            } catch (ParseException parseException) {
+                parseException.printStackTrace();
+                jsonString = "";
+            }
+            showBody(jsonString);
+        });
     }
 
     private Editor createEditor() {

@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class ParserToolWindowFactory implements ToolWindowFactory {
 
-   public static final String TOOL_WINDOW_ID = "Json Parser";
+   public static final String TOOL_WINDOW_ID = "json_parse";
 
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {

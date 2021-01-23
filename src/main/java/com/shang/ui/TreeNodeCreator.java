@@ -58,8 +58,9 @@ public class TreeNodeCreator {
                         }
                     }
                 }
-                if (isBreakable)
+                if (isBreakable) {
                     break;
+                }
             }
         }
         return rootNode;
