@@ -21,4 +21,4 @@ bin/
 gen/
 .gradle/*
 build/*
-
+.DS_Store
