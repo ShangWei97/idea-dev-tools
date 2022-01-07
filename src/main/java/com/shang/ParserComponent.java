@@ -108,7 +108,7 @@ public class ParserComponent implements ProjectComponent {
                             isShown = true;
                             time = System.currentTimeMillis();
                             Notifications.Bus.notify(new Notification(
-                                    "json_parse",
+                                    "dev-tools",
                                     "Do you like it",
                                     "",
                                     NotificationType.INFORMATION,

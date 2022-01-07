@@ -1,6 +1,7 @@
-package com.shang.ui.util;/**
+package com.shang.ui.util;
+/**
  *
- * @author shangwei@tuhu.cn
+ * @author shangwei
  * @date 2021/1/23
  */
 public class StringUtils {

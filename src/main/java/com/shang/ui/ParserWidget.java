@@ -77,8 +77,9 @@ public class ParserWidget extends JPanel implements IParserWidget {
 
     @Override
     public void closeCurrentParserSession() {
-        if (mTabs != null)
+        if (mTabs != null) {
             mTabs.closeCurrentTab();
+        }
     }
 
     @Override

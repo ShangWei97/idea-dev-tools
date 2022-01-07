@@ -18,7 +18,7 @@ import static com.shang.ui.util.ToStringUtils.ToStringTokenUtils.splitToken;
 /**
  * toString -> json
  *
- * @author shangwei@tuhu.cn
+ * @author shangwei
  * @date 2021/1/22
  */
 public class ToStringUtils {

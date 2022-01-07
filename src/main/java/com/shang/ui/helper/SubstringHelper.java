@@ -23,11 +23,12 @@ public class SubstringHelper {
         String[] arr = errorData.split(" ");
         for (int i = 0; i < arr.length; i++) {
             String s = arr[i];
-            if (!TextUtils.isEmpty(s) && s.equalsIgnoreCase("line")) {
+            if (!TextUtils.isEmpty(s) && "line".equalsIgnoreCase(s)) {
                 if ((i + 1) < arr.length) {
                     String s1 = arr[i + 1];
-                    if (s1.matches("\\d+"))
+                    if (s1.matches("\\d+")) {
                         return Integer.parseInt(s1);
+                    }
                 }
             }
         }

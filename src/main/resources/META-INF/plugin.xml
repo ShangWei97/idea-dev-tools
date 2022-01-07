@@ -1,6 +1,6 @@
 <idea-plugin>
-    <id>com.shang.json_parse</id>
-    <name>json_parse</name>
+    <id>com.shang.dev-tools</id>
+    <name>Dev-Tools</name>
     <vendor email="shang717597589@gmail.com" url="">shangwei</vendor>
 
 
@@ -20,12 +20,12 @@ Install and spread the word :)<br>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <toolWindow id="json_parse" anchor="right"
+        <toolWindow id="dev-tools" anchor="right"
                     factoryClass="com.shang.ParserToolWindowFactory"/>
     </extensions>
     <actions>
-        <action id="ParserActionId" class="com.shang.ui.action.OpenParserAction" text="json_parse"
-                description="Open in json_parse">
+        <action id="ParserActionId" class="com.shang.ui.action.OpenParserAction" text="dev-tools"
+                description="Open in dev-tools">
             <add-to-group group-id="EditMenu" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift alt J" second-keystroke="ctrl alt J"/>
         </action>
